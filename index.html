@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Deglon - Data & Analytics Executive</title>
+    <meta name="description" content="Patrick Deglon - 25+ years Strategy and Analytics Executive with expertise in Data Science, AI/ML, and Enterprise Analytics Leadership">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1DA7A0;
+            --primary-dark: #178F89;
+            --primary-light: #2BC4BC;
+            --bg: #0F1419;
+            --bg-secondary: #1A2129;
+            --text: #F7F9F9;
+            --text-muted: #8B98A5;
+            --border: #2F3336;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            border: 4px solid var(--primary-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--text) 0%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            color: var(--primary);
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .location {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .bio {
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        section h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 1.25rem;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill {
+            background: rgba(29, 167, 160, 0.1);
+            border: 1px solid var(--primary);
+            color: var(--primary-light);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .experience-item {
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .experience-item:first-child {
+            padding-top: 0;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-title {
+            font-weight: 600;
+            color: var(--text);
+            font-size: 1.05rem;
+        }
+
+        .experience-company {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .experience-period {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .experience-description {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .highlights {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .highlights li {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding-left: 1.25rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlights li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .education-item {
+            margin-bottom: 1rem;
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-degree {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .education-school {
+            color: var(--primary);
+        }
+
+        .education-year {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding: 2rem 0;
+        }
+
+        .link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 9999px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .link:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .accomplishments {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .accomplishment {
+            background: rgba(29, 167, 160, 0.05);
+            border-left: 3px solid var(--primary);
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .accomplishment-title {
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.25rem;
+        }
+
+        .accomplishment-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            margin-top: 1.5rem;
+        }
+
+        .cta-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1rem;
+            }
+
+            header {
+                padding: 2rem 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .experience-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="avatar">PD</div>
+            <h1>Patrick Deglon</h1>
+            <p class="tagline">Data & Analytics Executive | AI Transformation Leader</p>
+            <p class="location">Poway, California, USA | Swiss & US Citizenship</p>
+            <p class="bio">
+                25+ years of Strategy and Analytics Executive experience spanning fundamental research at CERN,
+                business analytics leadership at eBay, analytics engineering at Google/Motorola, and enterprise
+                analytics transformation at Teradata, Change Healthcare, and Optum/UnitedHealth Group.
+            </p>
+            <a href="https://cal.com/bluefermion/30min" class="cta-button" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                Book a Meeting
+            </a>
+        </header>
+
+        <section>
+            <h2>Areas of Expertise</h2>
+            <div class="skills">
+                <span class="skill">Data Science</span>
+                <span class="skill">Advanced Statistics</span>
+                <span class="skill">AI/ML Integration</span>
+                <span class="skill">Enterprise Analytics</span>
+                <span class="skill">Data Engineering</span>
+                <span class="skill">Business Intelligence</span>
+                <span class="skill">Data Governance</span>
+                <span class="skill">Team Leadership (250+)</span>
+                <span class="skill">C-Level Engagement</span>
+                <span class="skill">Product Management</span>
+                <span class="skill">Cloud Platforms (AWS/GCP)</span>
+                <span class="skill">Agile/SAFe</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Current Venture</h2>
+            <div class="experience-item" style="padding: 0; border: none;">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Founder & Managing Director</div>
+                        <div class="experience-company">Blue Fermion LLC (Blue Fermion Labs & Blue Fermion Advisory)</div>
+                    </div>
+                    <span class="experience-period">Aug 2025 - Present</span>
+                </div>
+                <ul class="highlights">
+                    <li>Leading development of <strong>AgentResume.ai</strong>, a SaaS platform transforming static resumes into interactive AI agents</li>
+                    <li>Providing fractional CDO/CAO/CDAO and AI transformation advisory to enterprise clients</li>
+                    <li>Full-stack architecture with Google AppEngine Go, Bootstrap, HTMX, and LLM orchestration</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Career Highlights</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Vice President, Business Analytics</div>
+                        <div class="experience-company">Optum Insight (UnitedHealth Group)</div>
+                    </div>
+                    <span class="experience-period">2023 - 2025</span>
+                </div>
+                <p class="experience-description">
+                    Led enterprise analytics through the Optum-Change Healthcare merger. Created "Single Pane of Glass"
+                    executive dashboard, pioneered GPT-4/LangChain integration for natural language data queries,
+                    and built a self-sustaining Data & Analytics organization with servant leadership principles.
+                </p>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Vice President, Engineering - Enterprise Analytics</div>
+                        <div class="experience-company">Change Healthcare</div>
+                    </div>
+                    <span class="experience-period">2020 - 2023</span>
+                </div>
+                <p class="experience-description">
+                    Led 240+ person team spanning data engineers, BI developers, software engineers, and data scientists.
+                    Migrated legacy systems to cloud-native AWS architecture. Launched enterprise-wide Analytics Literacy Program.
+                </p>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Vice President, Product Management</div>
+                        <div class="experience-company">Teradata</div>
+                    </div>
+                    <span class="experience-period">2016 - 2020</span>
+                </div>
+                <p class="experience-description">
+                    Orchestrated transformation from data warehouse company to analytics platform provider.
+                    Managed 160+ cross-functional team. Led Stanford DAWN partnership for cutting-edge AI research integration.
+                    Launched Teradata Analytics Platform with next-gen data science capabilities.
+                </p>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Senior Director of Engineering, Analytics</div>
+                        <div class="experience-company">Motorola Mobility / Google</div>
+                    </div>
+                    <span class="experience-period">2013 - 2015</span>
+                </div>
+                <p class="experience-description">
+                    Established analytics capability post-Google acquisition. Led 30-person team achieving $10M savings
+                    in data warehouse costs. Pioneered migration to Google BigQuery as one of its largest early customers.
+                </p>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Director, Global Traffic & Customer Analytics</div>
+                        <div class="experience-company">eBay</div>
+                    </div>
+                    <span class="experience-period">2004 - 2012</span>
+                </div>
+                <p class="experience-description">
+                    8 years of progressive leadership across Customer Analytics, Loyalty Analytics, and Global Traffic Analytics.
+                    Invented "Mirror Analysis" methodology inspired by particle physics. Led landmark Google Paid Search experiment
+                    cited in academic literature and HBR. Created Customer Lifetime Value framework and marketing attribution platform.
+                </p>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Physicist & Research Scientist</div>
+                        <div class="experience-company">CERN (L3 Experiment)</div>
+                    </div>
+                    <span class="experience-period">1997 - 2002</span>
+                </div>
+                <p class="experience-description">
+                    Co-author of 140 scientific publications within 406-physicist international collaboration from 17 countries.
+                    PhD thesis validated Standard Model up to 209 GeV. Developed detector calibration systems and early neural
+                    networks for particle identification.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Signature Innovations</h2>
+            <div class="accomplishments">
+                <div class="accomplishment">
+                    <div class="accomplishment-title">Mirror Analysis Methodology (eBay)</div>
+                    <div class="accomplishment-desc">Invented particle-physics-inspired methodology to measure Internet Marketing incrementality, resolving multi-year attribution disputes.</div>
+                </div>
+                <div class="accomplishment">
+                    <div class="accomplishment-title">Single Pane of Glass (Optum)</div>
+                    <div class="accomplishment-desc">Led enterprise-wide data transformation with centralized Snowflake warehouse and GPT-4 powered natural language queries for executives.</div>
+                </div>
+                <div class="accomplishment">
+                    <div class="accomplishment-title">Geometric Mean Estimator (eBay)</div>
+                    <div class="accomplishment-desc">Tripled A/B test power efficiency with mathematical innovation enabling 3x fewer data points for same confidence intervals.</div>
+                </div>
+                <div class="accomplishment">
+                    <div class="accomplishment-title">Google Paid Search Experiment (eBay)</div>
+                    <div class="accomplishment-desc">Led groundbreaking DMA-based experiment revealing true SEM incrementality, later published in academic literature and Harvard Business Review.</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education & Governance</h2>
+            <div class="education-item">
+                <div class="education-degree">Ph.D. in Physics</div>
+                <div class="education-school">University of Geneva, Switzerland</div>
+                <div class="education-year">1997 - 2002 | Bhabha Scattering at L3 Experiment, CERN</div>
+            </div>
+            <div class="education-item">
+                <div class="education-degree">M.S. in Particle Physics</div>
+                <div class="education-school">University of Geneva, Switzerland</div>
+                <div class="education-year">1992 - 1997</div>
+            </div>
+            <div class="education-item" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+                <div class="education-degree">Chairman of the Board of Directors</div>
+                <div class="education-school">Gluten Intolerance Group of North America</div>
+                <div class="education-year">2016 - 2020</div>
+            </div>
+            <div class="education-item">
+                <div class="education-degree">Governance Fellow</div>
+                <div class="education-school">National Association of Corporate Directors (NACD)</div>
+            </div>
+        </section>
+
+        <div class="links">
+            <a href="https://github.com/patdeg" class="link" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/deglon" class="link" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn
+            </a>
+            <a href="mailto:pdeglon@gmail.com" class="link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email
+            </a>
+            <a href="https://cal.com/bluefermion/30min" class="link" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                Schedule
+            </a>
+            <a href="https://bluefermion.com" class="link" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                Blue Fermion
+            </a>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Patrick Deglon. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Demeterics AI Chat Widget -->
+    <script src="https://demeterics.com/widget/embed.js"
+            data-key="DEM-DPIHMTZ2IULY"
+            data-theme="dark"
+            data-avatar="friendly"
+            async></script>
+    <dem-agent title="Ask me anything"></dem-agent>
+</body>
+</html>
